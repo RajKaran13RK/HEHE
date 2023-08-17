@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Login Form</title>
+	<script type="text/javascript">
+		function fv()
+		{
+			flag=1;
+			var un2=document.f1.un1.value;
+			var pwd2=document.f1.pwd1.value;
+			if(un2==""||pwd2=="")
+			{
+				flag=0;
+			}
+			if(flag==1)
+			{
+				return true;
+			}
+			else
+			{
+				alert("Don't leave username and password blank.")
+				return false;
+			}
+		}
+		
+	</script>
+</head>
+<body>
+	User Login Form<br>
+	<form name="f1" method="post"  onsubmit=" return fv()">
+		Username: <input type="text" name="un1"><br>
+		Password: <input type="password" name="pwd1"><br>
+		<input type="submit" name="sub1" value="Submit" >&nbsp; &nbsp; &nbsp; &nbsp; 
+		<input type="reset" name="reset" value="Reset"><br>
+	</form>
+</body>
+</html>

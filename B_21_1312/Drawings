@@ -1,0 +1,21 @@
+22_07_2023:-
+	Jul_22_2023_f1.html:-
+		User Registration Form:-
+			Username:
+			Password:
+				(Display condition and verify min-max char limit of password.)
+			Confirm Password:
+			DOB:
+			Fname:
+			Lname:
+			Gender: Male/Female (Given as option)(Known as radio button)
+			Submit (button) Cancel(button)
+
+		Login Form:-
+			Username:
+			Password:
+			Submit(button) Cancel(button)
+
+
+Accept a usernaem and check if its a plaindrome or not
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Client Side Registration Form</title>
+	<script type="text/javascript">
+		function formvalidation() 
+		{
+			//Done on 22 July 2023
+			var un2=document.f1.un1.value;
+			if (un2=="") 
+			{
+				alert("Username Cannot Be Empty.");
+			}
+			else
+			{
+				if((un2.length<6)||(un2.length>32))
+				{
+					alert("Username should be min 6 chars and max 32 chars.");
+				}
+			}
+			var pwd2=document.f1.pwd1.value;
+			if (pwd2=="") 
+			{
+				alert("Password Cannot Be Empty.")
+			}
+			else
+			{
+				if((pwd2.length<4)||(pwd2.length>8))
+				{
+					alert("Password should be min 4 chars and max 8 chars.")
+				}
+			}
+			var cpwd2=document.f1.cpwd1.value;
+			if(pwd2!=cpwd2)
+			{
+				alert("Password doesn't match.")
+			}
+			//Done on 27 July 2023
+			var dob2=document.f1.dob1.value;
+			if(dob2=="")
+			{
+				alert("Date of birth not selected.")
+			}
+			var fName2=document.f1.fName1.value;
+			var lName2=document.f1.lName1.value;
+			if((fName2=="")||(lName2==""))
+			{
+				alert("First name and Last name cannot be empty.")
+			}
+			var gender2="";
+			for(i=0;i<document.f1.gender1.length;i++)
+			{
+				if(document.f1.gender1[i].checked)
+				{
+					var gender2=document.f1.gender1[i].value;
+					break;
+				}
+			}
+			if(gender2=="")
+			{
+				alert("Gender is not selected.")
+			}
+		}
+	</script>
+</head>
+<body>
+	User Registration Form<br>
+	<form name="f1" method="post" onsubmit="formvalidation()">
+		Username: <input type="text" name="un1"><br>
+		Password: <input type="password" name="pwd1"><br>
+		Confirm Password: <input type="password" name="cpwd1"><br>
+		Date Of Birth:<input type="date" name="dob1"><br>
+		First Name: <input type="text" name="fName1"><br>
+		Last Name: <input type="text" name="lName1"><br>
+		Gender: <input type="radio" name="gender1" value="Male">Male&nbsp; &nbsp; &nbsp; &nbsp; 
+				<input type="radio" name="gender1" value="Female">Female<br>
+		<input type="submit" name="sub1" value="Submit" >&nbsp; &nbsp; &nbsp; &nbsp; 
+		<input type="reset" name="reset" value="Reset"><br>
+	</form>
+</body>
+</html>

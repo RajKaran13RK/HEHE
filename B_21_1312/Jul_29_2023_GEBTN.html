@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>DOM using JS.</title>
+	<script type="text/javascript">
+		//DOM Manipulation and getElementsByTagName Method.
+		function sc()
+		{
+			var para=document.getElementsByTagName("h1");
+			for (var i = 0;i<para.length; i++) 
+			{
+				para[i].style.fontSize=24;
+				para[i].style.fontWeight="bold";
+				para[i].style.fontStyle="italic";
+				para[i].style.color="white";
+			}
+		}
+	</script>
+</head>
+<body bgcolor="black">
+	<h1 style="color: tomato">#1 Paragraph.</h1>
+	<p style="color: tomato">#2 Paragraph.</p>
+	<p style="color: tomato">#3 Paragraph.</p>
+	<p style="color: tomato">#4 Paragraph.</p>
+	<h1 style="color: tomato">#5 Paragraph.</h1>
+	<button onclick="sc()" name="submit">Change Style</button>
+	<!-- <h2 id="heading2">Some random text</h2> -->
+</body>
+</html>

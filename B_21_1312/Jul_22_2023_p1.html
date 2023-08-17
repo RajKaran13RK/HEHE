@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Client Side Registration Form</title>
+	<script type="text/javascript">
+		function palindrome() 
+		{
+			var un2=document.f1.un1.value;
+			var un3="";
+			for (var i=un2.length-1;i>=0;i--)
+			{
+				un3+=un2[i];
+			}
+			if(un2==un3)
+			{
+				alert("Its a Panlindrome Username.");
+			}
+			else
+			{
+				alert("Its not a Palindrome username.");
+			}
+		}
+	</script>
+</head>
+<body>
+	Panlindrome Program<br>
+	<form name="f1" method="post" onsubmit="palindrome()">
+		Username: <input type="text" name="un1"><br>
+		<input type="submit" name="sub1" value="Submit" >&nbsp; &nbsp; &nbsp; &nbsp; 
+		<input type="reset" name="reset" value="Reset"><br>
+	</form>
+</body>
+</html>

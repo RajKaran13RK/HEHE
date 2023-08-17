@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<title>Client Side Registration Form</title>
+	<script type="text/javascript">
+		function formvalidation() 
+		{
+			//Copy pasted from "July_22_2023_f1.html" on 27 July 2023 for ajax.
+			//Final file included.
+			var un2=document.f1.un1.value;
+			var flag=1;
+			if (un2=="") 
+			{
+				flag=0;
+			}
+			else
+			{
+				if((un2.length<6)||(un2.length>32))
+				{
+					flag=0;
+				}
+			}
+			var pwd2=document.f1.pwd1.value;
+			if (pwd2=="") 
+			{
+				flag=0;
+			}
+			else
+			{
+				if((pwd2.length<4)||(pwd2.length>8))
+				{
+					flag=0;
+				}
+			}
+			var cpwd2=document.f1.cpwd1.value;
+			if(pwd2!=cpwd2)
+			{
+				flag=0;
+			}
+			//Done on 27 July 2023
+			var dob2=document.f1.dob1.value;
+			if(dob2=="")
+			{
+				flag=0;
+			}
+			var fName2=document.f1.fName1.value;
+			var lName2=document.f1.lName1.value;
+			if((fName2=="")||(lName2==""))
+			{
+				flag=0;
+			}
+			var gender2="";
+			for(i=0;i<document.f1.gender1.length;i++)
+			{
+				if(document.f1.gender1[i].checked)
+				{
+					var gender2=document.f1.gender1[i].value;
+					break;
+				}
+			}
+			if(gender2=="")
+			{
+				flag=0;
+			}
+			if(flag==1)
+			{
+				return true;
+			}
+			else
+			{
+				alert("Entered data is not correct.")
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+	User Registration Form<br>
+	<form name="f1" method="post" action="test.php" onsubmit="return formvalidation()">
+		Username: <input type="text" name="un1"><br>
+		Password: <input type="password" name="pwd1"><br>
+		Confirm Password: <input type="password" name="cpwd1"><br>
+		Date Of Birth:<input type="date" name="dob1"><br>
+		First Name: <input type="text" name="fName1"><br>
+		Last Name: <input type="text" name="lName1"><br>
+		Gender: <input type="radio" name="gender1" value="Male">Male&nbsp; &nbsp; &nbsp; &nbsp; 
+				<input type="radio" name="gender1" value="Female">Female<br>
+		<input type="submit" name="sub1" value="Submit" >&nbsp; &nbsp; &nbsp; &nbsp; 
+		<input type="reset" name="reset" value="Reset"><br>
+	</form>
+</body>
+</html>
